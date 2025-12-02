@@ -9,6 +9,12 @@ def add_product(name, price, quantity):
     }
     products.append(product)
     print(">>> Đã thêm sản phẩm thành công!")
+def check_low_stock():
+    print("\n=== SẢN PHẨM SẮP HẾT HÀNG (SL < 5) ===")
+    for p in products:
+        if p["qty"] < 5:
+            print(f"- {p['name']} | SL còn lại: {p['qty']}")
+
 
 def main():
     while True:
